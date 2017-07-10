@@ -9,6 +9,8 @@ var {user} =require('./models/User');
 
 var app=express();
 
+
+const port = process.env.PORT || 3000 ;
 app.use(bp.json());
 
 app.post('/todos',(req,res)=>{
@@ -50,7 +52,7 @@ app.post('/todos',(req,res)=>{
 
 
 
-app.listen(3000,()=>{
-console.log("strat on port 3000");
+app.listen(port,()=>{
+console.log(`strat on port ${port}`);
 
 });
