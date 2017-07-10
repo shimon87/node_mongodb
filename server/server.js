@@ -49,9 +49,6 @@ app.post('/todos',(req,res)=>{
    })
    });
 
-
-
-
 app.listen(port,()=>{
 console.log(`strat on port ${port}`);
 
