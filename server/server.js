@@ -47,7 +47,7 @@ app.post('/albums',(req,res)=>{
        if(!album){
         res.status(404).send();
        }
-       res.send({todo});
+       res.send({album});
    },(e)=>{
      res.status(400).send(e);
    })
