@@ -15,7 +15,11 @@ app.use(bp.json());
 
 app.post('/albums',(req,res)=>{
  var album= new album({
-   text: req.body.text
+   name: req.body.text,
+   url: req.body.text,
+   img: req.body.text,
+   tiny_img: req.body.text
+   
  });
 
  todo.save().then((doc)=>{
