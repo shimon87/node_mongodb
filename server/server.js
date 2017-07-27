@@ -6,15 +6,15 @@ const {ObjectID}=require('mongodb');
 
 var {Todo}=require('./models/Todo');
 var {user} =require('./models/User');
-
+var {album}=require('./models/albums')
 var app=express();
 
 
 const port = process.env.PORT || 3000 ;
 app.use(bp.json());
 
-app.post('/todos',(req,res)=>{
- var todo= new Todo({
+app.post('/albums',(req,res)=>{
+ var album= new album({
    text: req.body.text
  });
 
@@ -26,7 +26,7 @@ app.post('/todos',(req,res)=>{
 });
 
 
- app.get('/todos',(req,res)=>{
+ app.get('/album',(req,res)=>{
     Todo.find().then((todos)=>{
       res.send({todos});
   },(e)=>{
@@ -34,7 +34,7 @@ app.post('/todos',(req,res)=>{
   })
   });
 
-  app.get('/todos/:id',(req,res)=>{
+  app.get('/album/:id',(req,res)=>{
     var id =req.params.id;
     if(!ObjectID.isValid(id)){
       res.status(404).send();
