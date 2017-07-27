@@ -26,7 +26,7 @@ app.post('/albums',(req,res)=>{
 });
 
 
- app.get('/album',(req,res)=>{
+ app.get('/albums',(req,res)=>{
     Todo.find().then((todos)=>{
       res.send({todos});
   },(e)=>{
@@ -34,7 +34,7 @@ app.post('/albums',(req,res)=>{
   })
   });
 
-  app.get('/album/:id',(req,res)=>{
+  app.get('/albums/:id',(req,res)=>{
     var id =req.params.id;
     if(!ObjectID.isValid(id)){
       res.status(404).send();
