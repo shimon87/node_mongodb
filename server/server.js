@@ -19,7 +19,7 @@ app.post('/albums',(req,res)=>{
    url: req.body.text,
    img: req.body.text,
    tiny_img: req.body.text
-   
+
  });
 
  todo.save().then((doc)=>{
@@ -31,8 +31,8 @@ app.post('/albums',(req,res)=>{
 
 
  app.get('/albums',(req,res)=>{
-    Todo.find().then((todos)=>{
-      res.send({todos});
+    Todo.find().then((album)=>{
+      res.send({album});
   },(e)=>{
     res.status(400).send(e);
   })
@@ -43,8 +43,8 @@ app.post('/albums',(req,res)=>{
     if(!ObjectID.isValid(id)){
       res.status(404).send();
     }
-     Todo.findById(id).then((todo)=>{
-       if(!todo){
+     Todo.findById(id).then((albun)=>{
+       if(!album){
         res.status(404).send();
        }
        res.send({todo});
