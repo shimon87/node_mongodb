@@ -3,10 +3,7 @@ var bp=require('body-parser');
 
 var {mongose}=require('./db/mongoose');
 const {ObjectID}=require('mongodb');
-
-var {Todo}=require('./models/Todo');
-var {user} =require('./models/User');
-var {albums}=require('./models/albums')
+var {albums}=require('./models/albums');
 var app=express();
 
 
