@@ -1,6 +1,6 @@
 var mongoose =require('mongoose');
 
-var album = mongoose.model('album',{
+var albums = mongoose.model('albums',{
     name:{
       type:String,
       required: true,
@@ -32,5 +32,5 @@ var album = mongoose.model('album',{
 
 
 module.exports ={
-album
+albums
 };
