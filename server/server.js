@@ -12,10 +12,10 @@ app.use(bp.json());
 
 app.post('/albums',(req,res)=>{
  var album= new albums({
-   name: req.body.text,
-   url: req.body.text,
-   img: req.body.text,
-   tiny_img: req.body.text
+   name: req.body.name,
+   url: req.body.url,
+   img: req.body.img,
+   tiny_img: req.body.tiny_img
 
  });
 
