@@ -1,6 +1,6 @@
 var mongoose =require('mongoose');
 
-var User = mongoose.model('album',{
+var album = mongoose.model('album',{
     name:{
       type:String,
       required: true,
