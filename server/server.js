@@ -6,7 +6,7 @@ const {ObjectID}=require('mongodb');
 
 var {Todo}=require('./models/Todo');
 var {user} =require('./models/User');
-var {album}=require('./models/albums')
+var {albums}=require('./models/albums')
 var app=express();
 
 
@@ -14,7 +14,7 @@ const port = process.env.PORT || 3000 ;
 app.use(bp.json());
 
 app.post('/albums',(req,res)=>{
- var album= new album({
+ var album= new albums({
    name: req.body.text,
    url: req.body.text,
    img: req.body.text,
