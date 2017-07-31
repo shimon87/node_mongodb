@@ -1,7 +1,7 @@
 var mongoose =require('mongoose');
 
 var albums = mongoose.model('albums',{
-    tytle:{
+    title:{
       type:String,
       required: true,
       trim: true,
